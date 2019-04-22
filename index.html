@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>baby siri</title>
+    <meta name="keywords" content="Tencent,Siri,BabySiri">
+    <meta name="x5-fullscreen" content="false"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="address=no" name="format-detection">
+
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<div class="bg_wrapper">
+    <div class="bg bga" id="bga"></div>
+    <div class="bg bg1" id="bg1"></div>
+    <div class="bg bg2" id="bg2"></div>
+    <div id="cz" class="cz"></div>
+</div>
+<div class="game" id="babysiri-game"></div>
+
+<div class="video_wrapper" id="video_wrapper">
+    <video class="videosEle" id="mvideo" preload="none" x-webkit-airplay="true" webkit-playsinline="true" loop="loop"
+           poster="" src="" type='video/mp4'>
+    </video>
+</div>
+
+<div class="phone_wrapper" id="phone_wrapper">
+    <video class="videosEle" id="mphone" preload="none" x-webkit-airplay="true" webkit-playsinline="true" loop="loop"
+           poster="assets/video/b3.jpg" src="assets/video/b3.mp4" type='video/mp4'>
+    </video>
+</div>
+
+<div class="name_wrapper" id="name_wrapper">
+    <div class="name_content1">
+        <div class="input_wrapper">
+            <input id="siriname" name="siriname" maxlength="6" placeholder="这里取个新名字">
+            <i class="name_l l1"></i>
+            <i class="name_l l2"></i>
+        </div>
+        <i class="narrow al1"></i>
+        <i class="narrow al2"></i>
+        <i class="narrow ar1"></i>
+        <i class="narrow ar2"></i>
+        <a class="name_btn" id="name_btn"></a>
+    </div>
+
+    <div class="name_content2 fadeIn animated">
+        <div class="name_success name_s1"></div>
+        <p class="name_txt" id="name_txt">Siri</p>
+        <i class="name_l l3"></i>
+        <!--<div class="name"-->
+    </div>
+</div>
+<div class="name_wrapper"></div>
+<div id="p_tips"></div>
+<div class="share_wrapper fadeIn animated" id="share_wrapper">
+    <div class="share_i"></div>
+    <div class="share_txt lightSpeedIn animated"></div>
+    <a class="sclose_btn pulse animated infinite" id="sclose_btn"></a>
+</div>
+<div class="maudio" style="display: none">
+    <!--videoaudio-->
+    <div id="vaudio" style="display: none">
+        <audio class="bv1" src="assets/audio/bv1.mp3" preload="none"></audio>
+        <audio class="bv2" src="assets/audio/bv2.mp3" preload="none"></audio>
+        <audio class="bv4" src="assets/audio/bv4.mp3" preload="none"></audio>
+        <audio class="bv5" src="assets/audio/bv5.mp3" preload="none"></audio>
+        <audio class="bv6" src="assets/audio/bv6.mp3" preload="none"></audio>
+        <audio class="bv7" src="assets/audio/bv7.mp3" preload="none"></audio>
+        <audio class="bv8" src="assets/audio/bv8.mp3" preload="none"></audio>
+        <audio class="bv10" src="assets/audio/bv10.mp3" preload="none"></audio>
+        <audio class="bv13" src="assets/audio/bv13.mp3" preload="none"></audio>
+    </div>
+    <!--end-->
+    <div id="enda">
+        <audio class="e0" src="assets/audio/e0.mp3"></audio>
+        <audio class="e1" src="assets/audio/e1.mp3"></audio>
+        <audio class="e2" src="assets/audio/e2.mp3"></audio>
+        <audio class="e3" src="assets/audio/e3.mp3"></audio>
+        <audio class="e4" src="assets/audio/e4.mp3"></audio>
+        <audio class="e5" src="assets/audio/e5.mp3"></audio>
+    </div>
+
+    <!--home-->
+    <div id="haudio" style="display: none">
+        <audio class="haudio1" src="assets/audio/haudio1.mp3" preload="auto"></audio>
+        <audio class="haudio2" src="assets/audio/haudio2.mp3" preload="auto" loop="loop"></audio>
+        <audio class="didi" src="assets/audio/didi.mp3" preload="auto"></audio>
+        <audio class="haudioa1" src="assets/audio/haudioa1.mp3" preload="none"></audio>
+        <audio class="didia" src="assets/audio/didia.mp3" preload="none"></audio>
+
+    </div>
+    <!--question-->
+    <div id="qaudio">
+        <audio class="q0" src="assets/audio/q0.mp3" preload="none"></audio>
+        <audio class="q0_1" src="assets/audio/q0_1.mp3" preload="none"></audio>
+        <audio class="q1" src="assets/audio/q1.mp3" preload="none"></audio>
+        <audio class="q2" src="assets/audio/q2.mp3" preload="none" ></audio>
+        <audio class="q3" src="assets/audio/q3.mp3" preload="none"></audio>
+        <audio class="q5" src="assets/audio/q5.mp3" preload="none"></audio>
+        <audio class="q8" src="assets/audio/q8.mp3" preload="none"></audio>
+        <audio class="q9" src="assets/audio/q9.mp3" preload="none"></audio>
+        <audio class="q11" src="assets/audio/q11.mp3" preload="none"></audio>
+        <audio class="q14" src="assets/audio/q14.mp3" preload="none"></audio>
+        <audio class="q15" src="assets/audio/q15.mp3" preload="none"></audio>
+        <audio class="q16" src="assets/audio/q16.mp3" preload="none"></audio>
+        <audio class="q17" src="assets/audio/q17.mp3" preload="none"></audio>
+    </div>
+    <div id="erra" style="display: none">
+        <audio class="err0" src="assets/audio/err0.mp3" preload="auto"></audio>
+        <audio class="err1" src="assets/audio/err1.mp3" preload="auto"></audio>
+        <audio class="err2" src="assets/audio/err2.mp3" preload="auto"></audio>
+    </div>
+    <audio id="home1" src="assets/audio/h1.mp3" preload="auto"></audio>
+    <audio id="g1" src="assets/audio/g1.mp3" preload="auto"></audio>
+    <audio id="pcall"  src="assets/audio/call.mp3" preload="none" loop></audio>
+    <audio id="paudio" src="assets/audio/phone.mp3" preload="none"></audio>
+    <audio id="vend" src="assets/audio/vend.mp3" preload="none"></audio>
+</div>
+
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content"><i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+
+<script src="js/lib/phaser-no-physics.min.js"></script>
+<script src="js/lib/howler.min.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.gsap.min.js"></script>
+<script src="js/lib/TweenMax.min.js"></script>
+<script src="js/main.min.js"></script>
+
+
+</body>
+</html>
+
